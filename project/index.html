@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudioGrain</title>
+	<link rel="icon" type="image/png" href="../img/fav.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<script src="https://unpkg.com/popper.js"></script>
+	<link rel="stylesheet" href="../css/fontello.min.css">
+	<link rel="stylesheet" href="../css/magnific-popup.min.css">
+	<link rel="stylesheet" href="../css/animsition.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/projMap.js"></script>
+</head>
+
+<body id="project-page" class="loader">
+
+<!-- small modal -->
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" style="margin-top: 50%; border-radius: 0px">
+      <div class="modal-body" style="padding: 0px;">
+            <div class="contact-card">
+<!-- 		      <div class="contact-card__header-image">
+		        <div class="contact-card__avatar"></div>
+		      </div> -->
+		    	<p class="contact-card__name">Priyanka Ranka</p>
+		      <div>
+		        <li class="contact-card__link contact-card__link--email"><a title="Email Priyanka" href="mailto:studiograin1@gmail.com">&#9993; studiograin1@gmail.com</a></li>
+		        <li class="contact-card__link contact-card__link--mobile"><a title="Call Priyanka" href="tel:+919739632464">&phone; +919739632464</a></li>
+		      </div>
+    	<!-- <ul class="contact-card__footer">
+        <li class="contact-card__footer__link contact-card__footer__link--twitter"><a title="Visit Callum Brown's Twitter profile" href="https://twitter.com/callumbrown___"><i class="fa fa-twitter"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--linkedin"><a title="Visit Callum Brown's LinkedIn profile" href="https://www.linkedin.com/in/callumbrown---/"><i class="fa fa-linkedin"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--codepen"><a title="Visit Callum Brown's Codepen profile" href="https://codepen.io/callumbrown___"><i class="fa fa-codepen"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--dribbble"><a title="Visit Callum Brown's Dribbble profile" href="https://dribbble.com/callumbrown___"><i class="fa fa-dribbble"></i></a></li> -->
+    		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div class="global-outer">
+		<div class="global-inner">
+
+			<header id="sidebar">
+				<div class="sidebar-inner">
+					<a class="logo smooth-leave" href="../index.html">
+						<img src="../img/giflogo.gif" alt="SG">
+					</a>
+
+					<nav>
+						<ul>
+							<li><a class="smooth-leave" href="../about/">About</a></li>
+							<li><span data-toggle="modal" data-target="#smallModal">Contact</span></li>
+							<li><a class="smooth-leave" href="https://www.instagram.com/studio.grain/"><i class="fa fa-instagram" style="font-size:18px"></i></a></li>
+						</ul>
+					</nav>
+
+					<p class="copyright">StudioGrain &copy; 2020.
+						<br>Crafted with care &amp; love.</p>
+				</div>
+			</header>
+
+
+			<main id="main">
+				<div class="main-outer">
+					<div class="container-fluid">
+						
+
+
+						<!-- LOAD title and desc -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="description text-focus-in">
+									<div style="display: flex;"><h1 style="font-style: italic; font-family: didotItalic; font-size: 2em" id="title"></h1> <span style="margin-left: auto;font-size:24px;margin-left: auto;align-self: center;"><img src="img/front-arrow.png" id="front-arrow" onclick="nextProj()"></span></div>
+									<p id="desc"></p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- load Gifs -->
+						<div class="row puff-in-ver" id="gifGrid">
+						</div>
+
+						<!-- load Images -->
+						<div class="row puff-in-ver" id="imgGrid">
+						</div>
+						
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function imgFill(length, giflength, urlParam) {
+			var gifout = "";
+		    var out = "";
+		    var i;
+			var z;
+
+			if(giflength > 0)
+			{
+				for(z = 1; z <= giflength; z= z+1) {
+
+					//full width
+					gifout += '<div class="col-md-12 "><div class="project-image"><img src="img/'+urlParam+'/gif-'+(z)+'.gif" alt="" ></div></div>';
+					$("#gifGrid").append(gifout);
+					gifout = "";
+					
+				}
+			}
+			
+		    for(i = 1; i <= length; i= i+1) {
+
+		    	//full width
+		    	out += '<div class="col-md-12 "><div class="project-image"><img src="img/'+urlParam+'/'+(i)+'.jpg" alt="" ></div></div>';
+		    	//halfwidth
+		        // out += '<div class="col-md-6"><div class="project-image"><div class="caption">'+(i+1)+'</div><img src="img/'+urlParam+'/'+(i+1)+'.jpg" alt="" ></div></div>';
+		        // out += '<div class="col-md-6"><div class="project-image"><div class="caption">'+(i+2)+'</div><img src="img/'+urlParam+'/'+(i+2)+'.jpg" alt="" ></div></div>';
+		        $("#imgGrid").append(out);
+		        out = "";
+		    }
+ 
+		}
+	</script>
+	<script type="text/javascript">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+				
+		if(urlParams.has('proj')){  
+			//handle model type parameter if required
+			type = urlParams.get('proj');
+		}
+
+		//get Proj Detail
+		let proj = projMap[type];
+
+		document.getElementById("title").innerHTML = proj['title'];
+		document.getElementById("desc").innerHTML = proj['desc'];
+
+		imgFill(proj['length'],proj['giflength'], type);
+
+		function nextProj(){
+
+			var keys = Object.keys(projMap);
+
+			var index = keys.indexOf(type);
+
+			var nextIndex;
+
+			if(index < keys.length - 1){
+			 nextIndex = (index%(keys.length - 1)) + 1;
+			}
+			else if(index == keys.length - 1){
+			 nextIndex = index % (keys.length-1);
+			}
+
+			window.location.href = "index.html?proj="+keys[nextIndex]+"";
+		}
+
+
+		//animation stopping till loading has complete
+		document.getElementById("main").classList.add('js-loading');
+
+		window.addEventListener("load", showPage, false);
+
+		function showPage() {
+ 			 document.getElementById("main").classList.remove('js-loading');
+		}
+
+
+	</script>
+
+	<script src="../js/plugins.min.js"></script>
+	<script src="../js/functions.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StudioGrain</title>
+	<link rel="icon" type="image/png" href="img/fav.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<script src="https://unpkg.com/popper.js"></script>
+	<link rel="stylesheet" href="css/fontello.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.min.css">
+	<link rel="stylesheet" href="css/animsition.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="loader">
+
+<!-- small modal -->
+<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" style="margin-top: 50%; border-radius: 0px">
+      <div class="modal-body" style="padding: 0px;">
+            <div class="contact-card">
+<!-- 		      <div class="contact-card__header-image">
+		        <div class="contact-card__avatar"></div>
+		      </div> -->
+		    	<p class="contact-card__name">Priyanka Ranka</p>
+		      <div>
+		        <li class="contact-card__link contact-card__link--email"><a title="Email Priyanka" href="mailto:studiograin1@gmail.com">&#9993; studiograin1@gmail.com</a></li>
+		        <li class="contact-card__link contact-card__link--mobile"><a title="Call Priyanka" href="tel:+919739632464">&phone; +919739632464</a></li>
+		      </div>
+    	<!-- <ul class="contact-card__footer">
+        <li class="contact-card__footer__link contact-card__footer__link--twitter"><a title="Visit Callum Brown's Twitter profile" href="https://twitter.com/callumbrown___"><i class="fa fa-twitter"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--linkedin"><a title="Visit Callum Brown's LinkedIn profile" href="https://www.linkedin.com/in/callumbrown---/"><i class="fa fa-linkedin"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--codepen"><a title="Visit Callum Brown's Codepen profile" href="https://codepen.io/callumbrown___"><i class="fa fa-codepen"></i></a></li>
+        <li class="contact-card__footer__link contact-card__footer__link--dribbble"><a title="Visit Callum Brown's Dribbble profile" href="https://dribbble.com/callumbrown___"><i class="fa fa-dribbble"></i></a></li> -->
+    		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div class="global-outer">
+		<div class="global-inner">
+
+			<header id="sidebar">
+				<div class="sidebar-inner">
+					<a class="logo smooth-leave" href="/">
+						<img src="img/giflogo.gif" alt="SG">
+					</a>
+					<div class="widgets-block">
+						<div class="widget filter" id="works-filter">
+							<ul>
+								<li class="active" data-filter="*" style="display: none">All</li>
+								<li data-filter=".work">Work</li>
+								<li data-filter=".weddings">Weddings</li>
+								<li data-filter=".personalprojects">Personal Projects</li>
+							</ul>
+						</div>
+					</div>
+					<nav>
+						<ul>
+							<li><a class="smooth-leave" href="./about">About</a></li>
+							<li><span data-toggle="modal" data-target="#smallModal">Contact</span></li>
+							<li><a class="smooth-leave" href="https://www.instagram.com/studio.grain/"><i class="fa fa-instagram" style="font-size:18px"></i></a></li>
+						</ul>
+					</nav>
+					<p class="copyright">StudioGrain &copy; 2020.
+						<br>Crafted with care &amp; love.</p>
+				</div>
+			</header>
+
+			<main id="main">
+				<div class="main-outer">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="works-grid">
+									<div class="gutter" id="gutter">
+
+									<script type="text/javascript">
+										function projListFill(arr) {
+										    var out = "";
+										    var i;
+										    for(i = 0; i < arr.length; i++) {
+										        out += '<a class="works-item smooth-leave '+ arr[i].type+'" href="./project/index.html?proj='+arr[i].folder+'"><div class="picture"><div class="content"><div class="text">';
+										        out += '<h2>'+arr[i].title+'</h2><ul><li>'+ arr[i].desc+'</li></ul></div></div><img src="img/works/'+arr[i].url+'" alt=""></div></a>'
+										        $("#gutter").append(out);
+										        out = "";
+										    }
+										}
+									</script>
+
+
+							</div>
+							<!-- <div class="row">
+								<div class="col-md-12">
+									<div class="load-more"><a class="btn" href="#">Load More Projects</a>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			   </div>
+			</main>
+
+		</div>
+	</div>
+
+
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script type="text/javascript" src="js/projlist.js"></script>
+
+
+</body>
+
+</html>
